@@ -12,7 +12,11 @@ const day5 = $('#day1')
 function searchInfo(event) {
     event.preventDefault()
     const cityName = searchCity.val()
+
+    // Empty out info
     cityCurrent.empty()
+
+
     cityCurrent.append(cityName)
     fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=09f5fc783fda185655df2bae2ca3196b`)
     .then(function(response){
@@ -38,10 +42,9 @@ function searchInfo(event) {
 
             // Future Time
             for (let i = 8; i-1 <json.list.length; i= i+8){
+                $(`#day${i/8}Date`).empty()
                 const futureTime = json.list[i-1].dt * 1000
-                console.log(futureTime)
                 const futureDate = new Date(futureTime)
-                console.log(futureDate)
                 const futureMonth = futureDate.getMonth() + 1
                 const futureDay = futureDate.getDate()
                 const futureYear = futureDate.getFullYear()
@@ -50,22 +53,26 @@ function searchInfo(event) {
 
 
             // Current Wind Speed
+            $('#currentWind').empty()
             const currentWindSpeed = json.list[0].wind.speed
             $('#currentWind').append(currentWindSpeed)
 
             // Future Wind Speed
             for (let i = 8; i-1 <json.list.length; i= i+8){
+                $(`#day${i/8}Wind`).empty()
                 const futureWindSpeed = json.list[i-1].wind.speed
                 $(`#day${i/8}Wind`).append(futureWindSpeed)
             }
 
             // Current Temp
+            $('#currentTemp').empty()
             const tempInK = json.list[0].main.temp
             const tempInF = (tempInK-273.15)*1.8+32
             const currentTemp = tempInF.toFixed(2)
             $('#currentTemp').append(currentTemp)
 
             for (let i = 8; i-1 <json.list.length; i= i+8){
+                $(`#day${i/8}Temp`).empty()
                 const futureTempInK = json.list[i-1].main.temp
                 const futureTempInF = (futureTempInK-273.15)*1.8+32
                 const futureTemp = futureTempInF.toFixed(2)
@@ -73,11 +80,13 @@ function searchInfo(event) {
             }
 
             // Current Humidity
+            $('#currentHumid').empty()
             const currentHumid = json.list[0].main.humidity
             $('#currentHumid').append(currentHumid)
 
             // Future Humidity
             for (let i = 8; i-1 <json.list.length; i= i+8){
+                $(`#day${i/8}Humid`).empty()
                 const futureHumid = json.list[i-1].main.humidity
                 $(`#day${i/8}Humid`).append(futureHumid)
             }
@@ -89,6 +98,7 @@ function searchInfo(event) {
 
             // Future Humidity
             for (let i = 8; i-1 <json.list.length; i= i+8){
+                $(`#day${i/8}Icon`).empty()
                 const futureIcon = json.list[i-1].weather[0].icon
                 const futureAddIcon = $(`<img height='56' width='56' src="https://openweathermap.org/img/wn/${futureIcon}@2x.png">`)
                 $(`#day${i/8}Icon`).append(futureAddIcon)
