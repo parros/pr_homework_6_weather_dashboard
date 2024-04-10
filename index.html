@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+
+<header>
+    <h1>Weather Dashboard</h1>
+</header>
+<main>
+    <aside>
+        <h2>Search for a City:</h2>
+        <form>
+            <input type="text" id="searchCity" placeholder="San Diego"><br>
+            <Button type="submit" id="searchSubmit">Search</Button>
+        </form>
+        <ul>
+            <li><Button type="text" class="cityBtn">Atlanta</Button></li>
+        </ul>
+    </aside>
+
+    <section>
+        <div id="currentWeather">
+            <h2 id="cityCurrent">Atlanta</h2>
+            <p id="temp">Temp:</p>
+            <p id="wind">Wind:</p>
+            <p id="humidity">Humidity:</p>
+        </div>
+        <div id="futureWeather">
+            <h3 id="futureTitle">5-Day Forecast:</h3>
+            <div id="futureDays">
+                <div id="day1" class="day">
+                    <p id="day1Date"></p>
+                    <p id="day1Icon"></p>
+                    <p id="day1Temp">Temp:</p>
+                    <p id="day1Wind">Wind:</p>
+                    <p id="day1Humidity">Humidity:</p>
+                </div>
+                <div id="day2" class="day">
+                    <p id="day2Date"></p>
+                    <p id="day2Icon"></p>
+                    <p id="day2Temp">Temp:</p>
+                    <p id="day2Wind">Wind:</p>
+                    <p id="day2Humidity">Humidity:</p>
+                </div>
+                <div id="day3" class="day">
+                    <p id="day3Date"></p>
+                    <p id="day3Icon"></p>
+                    <p id="day3Temp">Temp:</p>
+                    <p id="day3Wind">Wind:</p>
+                    <p id="day3Humidity">Humidity:</p>
+                </div>
+                <div id="day4" class="day">
+                    <p id="day4Date"></p>
+                    <p id="day4Icon"></p>
+                    <p id="day4Temp">Temp:</p>
+                    <p id="day4Wind">Wind:</p>
+                    <p id="day4Humidity">Humidity:</p>
+                </div>
+                <div id="day5" class="day">
+                    <p id="day5Date"></p>
+                    <p id="day5Icon"></p>
+                    <p id="day5Temp">Temp:</p>
+                    <p id="day5Wind">Wind:</p>
+                    <p id="day5Humidity">Humidity:</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
