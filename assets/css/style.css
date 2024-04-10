@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    border-top: .5px solid rgba(135, 206, 250, 0.603);
+    list-style: none;
+    padding: 10px 0 0 0;
+}
+
+aside {
+    display: block;
+    width: 25%;
+    padding: 0 20px;
+}
+
+section {
+    display: inline;
+    width: 66%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 95%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    display: block;
+    padding: 10px 0;
+    padding-left: 20%;
+    background-color: lightskyblue;
+    text-align: center;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    height: 85%;
+    width: 100%;
+}
+
+#currentWeather {
+    margin: 10px 0;
+    padding-left: 10px;
+    height: 20%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+
+#futureWeather{
+    height: 50%;
+}
+
+#futureDays {
+    display: flex;
+    height: 75%;
+    font-size: 18px;
+    width: 100%;
+}
+
+.day {
+    color: white;
+    background-color: darkslategrey;
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+#day1 {
+    margin-left: 0;
+}
+
+#day5 {
+    margin-right: 0;
+}
+
+.cityBtn {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border: 0;
+    background-color: rgb(142, 149, 156);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#searchCity {
+    font-size: 18px;
+    padding-left: 5px;
+    width: 98.5%;
+    height: 42px;
+    border: .5px solid rgb(156, 164, 175);
+    border-radius: 5px;
+}
+
+#searchSubmit {
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 15px 0 0 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: royalblue;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+html {
+    height: 100%;
+}
