@@ -7,7 +7,7 @@ const cityBtn = $('.cityBtn')
 // Search city info through API
 function searchInfo(cityName) {
 
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=09f5fc783fda185655df2bae2ca3196b`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=09f5fc783fda185655df2bae2ca3196b`)
     .then(function(response){
         return response.json()
     })
