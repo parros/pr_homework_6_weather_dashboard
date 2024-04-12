@@ -12,7 +12,7 @@ N/A
 
 ## Usage
 
-N/A
+You can click on the grey button on the left side to look at previous city search weather information.
 
 ## Credits
 
