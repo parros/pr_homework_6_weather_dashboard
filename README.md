@@ -1,4 +1,4 @@
-# pr_homework_6_weather_dashboard
+# Homework 6 Weather Dashboard
 
 ## Description
 
